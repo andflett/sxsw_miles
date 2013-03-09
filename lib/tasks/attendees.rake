@@ -10,7 +10,8 @@ namespace :attendees do
     
 		@team_data = JSON.parse(team_req.body_str)
 		@team_data["users"].each do |user|
-			if Attendee.find_by_uid(user["userid"]).nil?
+			a = Attendee.find_by_uid(user["userid"])
+			if a.nil?
 				puts "Creating attendee: #{user['name']}"
 				Attendee.create!({
 					name: user["name"],
@@ -20,6 +21,12 @@ namespace :attendees do
 					biked: user["bike"].to_f,
 					walked: user["walk"].to_f
 				})
+			else
+				a.miles = user["miles"].to_f
+				a.run = user["run"].to_f
+				a.biked = user["bike"].to_f
+				a.walked = user["walk"].to_f
+				a.save!
 			end
 		end
     
