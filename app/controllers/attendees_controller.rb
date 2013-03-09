@@ -2,7 +2,7 @@ class AttendeesController < ApplicationController
 
 	def index
 		
-		@attendees = Attendee.order(:miles).reverse
+		@attendees = Attendee.all.sort_by(&:raised).reverse
 		
 		@total_miles = Attendee.sum('miles')
 		
