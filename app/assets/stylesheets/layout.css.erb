@@ -22,6 +22,21 @@
 			position: relative;
 			color: #ffffff;
 		}
+		
+		header .mxm {
+			position: absolute;
+			top: 10px;
+			left: 10px;
+			opacity: 0.7;
+			z-index: 3;
+			height: 40px;
+			width: 72px;
+			background-image: url(<%= asset_path "mxm_small.png" %>);
+		}
+		
+		header .mxm:hover {
+			opacity: 1;
+		}
 	
 		header:after {
 			content: '';
@@ -46,7 +61,7 @@
 			color: #ffffff;
 			background: rgba(255,149,90,0.7);
 			display: inline-block;
-			margin: 95px auto 113px;
+			margin: 95px auto 115px;
 			width: 57%;
 		}
 		
@@ -131,7 +146,7 @@
 	
 		footer {
 			background: #363D42;
-			padding: 40px 0 37px;
+			padding: 50px 0 37px;
 			color: #ffffff;
 		}
 	
@@ -143,9 +158,9 @@
 			margin: 0;
 		}
 		
-			footer p:last-child  {
-				padding-top: 10px;
-			}
+		footer p:last-child  {
+			padding-top: 25px;
+		}
 	
 		footer p a {
 			text-align: left;

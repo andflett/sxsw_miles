@@ -13,7 +13,7 @@ $(document).ready(function(){
 					2: "Biking"
 				}
 		  },
-			sliceColors: ["#a9d3c1","#f59575","#7da0cb"]
+			sliceColors: ["#a9d3c1","#f59575","#a1b4cb"]
 		}
 	);
 	
