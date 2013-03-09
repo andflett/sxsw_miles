@@ -1,7 +1,53 @@
 /* Not all media were born equal */
 
 @media all and (max-device-width: 480px) {
-
+	
+	header {
+		background-position: center top;
+		background-attachment:scroll;
+	}
+	
+	header .container h1 {
+		font-size: 22px;
+		line-height: 30px;
+		margin: 35px auto 42px;
+		width: 82%;
+	}
+	
+	header .container h1 strong {
+		font-size: 30px;
+		line-height: 38px;
+	}
+	
+	table tbody td.raised {
+		font-size: 24px;
+		padding-left: 10px;
+	}
+	
+	table tbody td.pie {
+		padding-left: 20px;
+		padding-right: 10px;
+	}
+	
+	section#primary_content h2 {
+		margin-bottom: 25px;
+	}
+	
+	section#primary_content .intro ul li {
+		display: block;
+		margin: 0 auto 15px;
+	}
+	
+	section#primary_content .intro ul li:last-child {
+		margin: 0 auto 10px;
+	}
+	
+	section#primary_content .intro ul {
+		padding-bottom: 15px;
+	}
+	
+	footer p a { margin-bottom: 10px; }
+	
 }
 @media all and (max-device-width: 768px) and (orientation:portrait) {
 
