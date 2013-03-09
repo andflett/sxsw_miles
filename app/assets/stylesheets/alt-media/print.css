@@ -1,0 +1,19 @@
+@media print,tty {
+
+	/* Apply some new styles */
+	body { background: none; width: 16cm; margin: 0 !important; 
+	padding: 0 !important; line-height: 1.4; font-size: 12pt; }
+	
+	.print { display: block; }
+	
+	/* Tables */
+	table { margin: 1px; text-align:left; }
+	th { border-bottom: 1px solid #333333;  font-weight: bold; }
+	td { border-bottom: 1px solid #333333; }
+	th,td { padding: 4px 10px 4px 0; }
+	tfoot { font-style: italic; }
+	caption { background: #FFFFFF; margin-bottom: 2em; text-align: left; }
+	thead {display: table-header-group;}
+	tr {page-break-inside: avoid;} 
+	
+}
