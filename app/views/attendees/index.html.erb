@@ -3,42 +3,35 @@
 <div class="panel container intro">
   <p>Walk or run your way between sessions while tracking your movements with Charity Miles and they'll donate <strong>25c</strong> for every mile. It's that simple.</p>
   
-  <ol>
-    <li><a href="http://www.charitymiles.org/">Download the App</a></li>
-    <li>On the profile page within the app, enter the team code <code>sxsw</code></li>
-    <li>Get moving!</li>
-  </ol>
+  <ul>
+    <li><span>1</span> <a href="http://www.charitymiles.org/">Download the app</a>, register and select your charity</li>
+    <li><span>2</span> Join the <code>sxsw</code> team from your in app profile</li>
+    <li><span>3</span> You'll appear below once you've completed your first mile</li>
+  </ul>
   
 </div>
 
 <section id="stats">
 
-  <h2>Who's moving the most?</h2>
+  <h2>Who's moving at SxSW?</h2>
 
   <% if @attendees.any? %>
 
   <div class="panel container">
 
     <table id="attendees">
-      <thead>
-        <tr>
-          <th>Raised</th>
-          <th>Name</th>
-          <th>Total</th>
-          <th class="sub">Run</th>
-          <th class="sub">Walked</th>
-          <th class="sub">Biked</th>
-        </tr>
-      </thead>
+      
       <tbody>
         <% @attendees.each do |a| %>
         <tr>
-          <td>&dollar;<%= number_with_precision(a.raised,:precision => 2) %></td>
-          <td><%= a.name %></td>
-          <td><%= pluralize(a.miles.to_f, "miles") %></td>
-          <td class="sub"><%= pluralize(a.run, "miles") %></td>
-          <td class="sub"><%= pluralize(a.walked, "miles") %></td>
-          <td class="sub"><%= pluralize(a.biked, "miles") %></td>
+          <td class="raised">&dollar;<%= number_with_precision(a.raised,:precision => 2) %></td>
+          <td class="name"><%= a.name %></td>
+          
+          <td class="pie">
+            <div class="piechart" id="pie_<%= a.id %>" values="<%= a.run %>,<%= a.walked %>,<%= a.biked %>"></div>
+          </td>
+          <td class="miles"><%= pluralize(a.miles.to_f, "mile") %></td>
+          
         </tr>
         <% end %>
       </tbody>

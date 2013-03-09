@@ -16,7 +16,8 @@
 	
 		header {
 			text-align: center;
-padding: 0;			background: url(<%= asset_path "crowd.jpg" %>) no-repeat center center fixed;
+			padding: 0;			
+			background: url(<%= asset_path "crowd.jpg" %>) no-repeat center center fixed;
 			background-size: cover;
 			position: relative;
 			color: #ffffff;
@@ -46,7 +47,7 @@ padding: 0;			background: url(<%= asset_path "crowd.jpg" %>) no-repeat center ce
 			background: rgba(255,149,90,0.7);
 			display: inline-block;
 			margin: 95px auto 110px;
-			width: 550px;
+			width: 60%;
 		}
 		
 		header .container h1 strong {
@@ -78,20 +79,48 @@ padding: 0;			background: url(<%= asset_path "crowd.jpg" %>) no-repeat center ce
 		
 		section#primary_content .intro p {
 			text-align: center;
-			font-size: 20px;
-			line-height: 28px;
-			width: 700px;
-			margin: 0 auto 35px;
+			font-size: 22px;
+			line-height: 30px;
+			width: 80%;
+			padding-top: 20px;
+			margin: 0 auto 30px;
 		}
 		
-		section#primary_content .intro ol {
+		section#primary_content .intro ul {
 			margin: 0;
-			padding: 0;
+			padding: 20px 0 25px;
+			text-align: center;
+		}
+		
+		section#primary_content .intro ul li {
+			font-size: 16px;
+			line-height: 22px;
+			display: inline-block;
+			width: 28%;
+			margin-right: 5%;
+			font-weight: 100;
+		}
+		
+		section#primary_content .intro ul li:last-child {
+			margin: 0;
+		}
+		
+		section#primary_content .intro ul li span {
+			font-size: 30px;
+			font-weight: bold;
+			display: block;
+			background: #F5815A;
+			color: #ffffff;
+			padding: 20px;
+			width: 20px;
+			border-radius: 50px;
+			margin: 0 auto 17px;
+			line-height: 19px;
+			font-weight: bold;
 		}
 		
 		section#primary_content #stats {
-			background: #f0f0f0;
-			padding-bottom: 65px;
+			padding-bottom: 68px;
 		}
 		
 		section#primary_content #stats h2 {
@@ -102,9 +131,8 @@ padding: 0;			background: url(<%= asset_path "crowd.jpg" %>) no-repeat center ce
 	
 		footer {
 			background: #363D42;
-			padding: 35px 0 0;
+			padding: 40px 0 38px;
 			color: #ffffff;
-			min-height: 100px;
 		}
 	
 		footer p {

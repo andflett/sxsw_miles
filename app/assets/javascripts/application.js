@@ -14,4 +14,5 @@
 //= require jquery_ujs
 //= require modernizr
 //= require spin.min
+//= require jquery.sparkline.min
 //= require_tree .

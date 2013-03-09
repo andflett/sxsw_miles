@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SxSW Charity Miles</title>
+    <title>SxSW Charity Miles from Made by Many</title>
     
     <meta name="description" content="Turn your SxSW miles into cash for charity." />
-		<meta name="keywords" content="sxsw, charity, miles, tracking" />
-		<link rel="shortcut icon" href="/favicon.ico?v2" />
+		<meta name="keywords" content="sxsw, charity, miles, tracking, madebymany" />
+		<link rel="shortcut icon" href="/favicon.ico?v234" />
     
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
@@ -13,12 +13,28 @@
     
     <script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
 		
+		<% if Rails.env.production? %>
+		<script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-37506986-2']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    <% end %>
+		
   </head>
   <body>
 
     <header>
       <div class="container">
-        <h1>Attendees at SxSW 2013 have raised <strong>&dollar;<%= number_with_precision(@total_cash, :precision => 2) %></strong> for charity simply by walking <strong><%= @total_miles %> miles</strong></h1>
+        <h1>Attendees of SxSW 2013 have raised <strong>&dollar;<%= number_with_precision(@total_cash, :precision => 2) %></strong> for charity by simply walking <strong><%= @total_miles %> miles</strong></h1>
       </div>
     </header>
 
@@ -28,7 +44,7 @@
     
     <footer>
       <div class="container">
-        <p>Brought to you by  <a class="ir mxm" href="http://madebymany.com">Made by Many</a> powered by  <a class="ir cm" href="http://www.charitymiles.org">Charity Miles</a></p>
+        <p><a class="ir mxm" href="http://madebymany.com">Made by Many</a> <a class="ir cm" href="http://www.charitymiles.org">Charity Miles</a></p>
       </div>
     </footer>
 
